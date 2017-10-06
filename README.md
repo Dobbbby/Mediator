@@ -2,9 +2,9 @@
 
 Mediator is a tool that helps with **Android permissions** at run time.
 
-## Get Started
+## 1. Get Started
 
-### Gradle
+### 1.1 Gradle
 
 ```gradle
 dependencies {
@@ -12,7 +12,7 @@ dependencies {
 }
 ```
 
-### Maven
+### 1.2 Maven
 
 ```xml
 <dependency>
@@ -23,7 +23,7 @@ dependencies {
 </dependency>
 ```
 
-## Java
+## 2. Java
 
 Simply add this to your Application's `onCreate()` method:
 
@@ -56,7 +56,7 @@ Mediator.request(Manifest.permission.WRITE_EXTERNAL_STORAGE)
         .delegate();
 ```
 
-##Kotlin
+## 3. Kotlin
 
 Simply add this to your Application's `onCreate()` method:
 
