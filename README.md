@@ -2,7 +2,9 @@
 
 Mediator is a tool that helps with **Android permissions** at run time.
 
-## 1. Get Started
+## 1. Getting Started
+
+The repo has been uploaded to jcenter().
 
 ### 1.1 Gradle
 
