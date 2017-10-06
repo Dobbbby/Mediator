@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.dobbby.mediator">
+
+    <application>
+        <activity android:name=".MediatorActivity"
+                  android:windowSoftInputMode="adjustResize|stateHidden"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+    </application>
+
+</manifest>
