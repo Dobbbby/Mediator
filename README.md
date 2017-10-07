@@ -1,6 +1,7 @@
 # Mediator
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/49560cef2d864b9fb95bb21c4b75dfaf)](https://www.codacy.com/app/Dobbbby/Mediator?utm_source=github.com&utm_medium=referral&utm_content=Dobbbby/Mediator&utm_campaign=badger)
+[![API](https://img.shields.io/badge/API-9%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=9)
 
 Mediator is a tool that helps with **Android permissions** at run time.
 
