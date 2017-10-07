@@ -19,6 +19,8 @@ import android.content.Context;
 import android.os.Build;
 import android.support.annotation.NonNull;
 
+import java.lang.ref.WeakReference;
+
 /**
  * Created by Dobbby on 2017/10/6.
  * <p>
@@ -27,8 +29,8 @@ import android.support.annotation.NonNull;
 public final class Mediator {
     private static Context application;
 
-    private static OnPerform onPerform;
-    private static OnRejected onRejected;
+    private static WeakReference<OnPerform> onPerform;
+    private static WeakReference<OnRejected> onRejected;
 
     private static OnRejected defaultOnRejected;
 
@@ -43,7 +45,7 @@ public final class Mediator {
 
     /**
      * Set default OnRejected callback. If onRejected method is not set
-     * in latter requests, this default one will be invoked.
+     * in later requests, this default one will be called.
      *
      * @param defaultOnRejected Do when rejected.
      */
@@ -67,8 +69,8 @@ public final class Mediator {
             return;
         }
 
-        Mediator.onPerform = onPerform;
-        Mediator.onRejected = onRejected;
+        Mediator.onPerform = new WeakReference<>(onPerform);
+        Mediator.onRejected = new WeakReference<>(onRejected);
 
         if (application == null) {
             throw new IllegalStateException("Is Mediator's init method called?");
@@ -78,14 +80,14 @@ public final class Mediator {
     }
 
     static void doOnPerform() {
-        if (onPerform != null) {
-            onPerform.onPerform();
+        if (onPerform != null && onPerform.get() != null) {
+            onPerform.get().onPerform();
         }
     }
 
     static void doOnRejected() {
-        if (onRejected != null) {
-            onRejected.onRejected();
+        if (onRejected != null && onRejected.get() != null) {
+            onRejected.get().onRejected();
         } else if (defaultOnRejected != null) {
             defaultOnRejected.onRejected();
         }
