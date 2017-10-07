@@ -30,7 +30,7 @@ publish {
     userOrg = 'dobbby'
     groupId = 'com.dobbby.mediator'
     artifactId = 'mediator'
-    publishVersion = '0.0.3'
+    publishVersion = '0.0.4'
 }
 
 dependencies {

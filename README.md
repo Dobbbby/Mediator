@@ -10,7 +10,7 @@ The repo has been uploaded to jcenter().
 
 ```gradle
 dependencies {
-    compile 'com.dobbby.mediator:mediator:0.0.3'
+    compile 'com.dobbby.mediator:mediator:0.0.4'
 }
 ```
 
@@ -20,7 +20,7 @@ dependencies {
 <dependency>
     <groupId>com.dobbby.mediator</groupId>
     <artifactId>mediator</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <type>pom</type>
 </dependency>
 ```
